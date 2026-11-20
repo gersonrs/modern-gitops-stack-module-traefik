@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.0](https://github.com/gersonrs/modern-gitops-stack-module-traefik/compare/v2.9.0...v3.0.0) (2026-11-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* provider major bumps and a stricter Terraform baseline; consumers must run `terraform init -upgrade`.
+
+### 🚀 New Features
+
+* upgrade charts, providers and Terraform baseline ([#21](https://github.com/gersonrs/modern-gitops-stack-module-traefik/issues/21)) ([b70509f](https://github.com/gersonrs/modern-gitops-stack-module-traefik/commit/b70509f54fcb1bf12a41e4713512d08aa3a98137))
+
 ## [2.9.0](https://github.com/GersonRS/modern-gitops-stack-module-traefik/compare/v2.8.0...v2.9.0) (2026-01-26)
 
 
