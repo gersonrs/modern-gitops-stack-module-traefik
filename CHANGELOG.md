@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.2](https://github.com/gersonrs/modern-gitops-stack-module-traefik/compare/v3.0.1...v3.0.2) (2026-11-21)
+
+
+### 🔥 Bug Fixes
+
+* ship the Traefik CRDs through templates ([#25](https://github.com/gersonrs/modern-gitops-stack-module-traefik/issues/25)) ([2bbd414](https://github.com/gersonrs/modern-gitops-stack-module-traefik/commit/2bbd4147b0705f20226bb1aba0cf9198ff03863f))
+
 ## [3.0.1](https://github.com/gersonrs/modern-gitops-stack-module-traefik/compare/v3.0.0...v3.0.1) (2026-11-21)
 
 
