@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/gersonrs/modern-gitops-stack-module-traefik/compare/v3.0.0...v3.0.1) (2026-11-21)
+
+
+### 🔥 Bug Fixes
+
+* skip the Gateway API CRDs vendored in the traefik chart ([#23](https://github.com/gersonrs/modern-gitops-stack-module-traefik/issues/23)) ([5555993](https://github.com/gersonrs/modern-gitops-stack-module-traefik/commit/5555993c194284ee3250b0b58ab18a4633c8887d))
+
 ## [3.0.0](https://github.com/gersonrs/modern-gitops-stack-module-traefik/compare/v2.9.0...v3.0.0) (2026-11-20)
 
 
