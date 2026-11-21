@@ -56,6 +56,12 @@ resource "argocd_application" "this" {
       helm {
         release_name = "traefik"
         values       = data.utils_deep_merge_yaml.values.output
+        # The chart vendors the Gateway API CRDs (crds/gateway-standard-install.yaml)
+        # at an older version than the one the stack installs through the
+        # gateway-api-crds application. Installing them here is rejected by the
+        # Gateway API safe-upgrades admission policy and fails the whole sync,
+        # so let gateway-api-crds own them.
+        skip_crds = true
       }
     }
 
