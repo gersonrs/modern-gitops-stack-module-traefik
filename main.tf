@@ -61,6 +61,9 @@ resource "argocd_application" "this" {
         # gateway-api-crds application. Installing them here is rejected by the
         # Gateway API safe-upgrades admission policy and fails the whole sync,
         # so let gateway-api-crds own them.
+        #
+        # The Traefik CRDs themselves (traefik.io and hub.traefik.io) are still
+        # required, so they live under templates/crds and render normally.
         skip_crds = true
       }
     }
