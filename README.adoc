@@ -61,11 +61,11 @@ The following requirements are needed by this module:
 
 The following providers are used by this module:
 
-- [[provider_null]] <<provider_null,null>> (3.3.2)
+- [[provider_utils]] <<provider_utils,utils>> (2.7.0)
 
 - [[provider_argocd]] <<provider_argocd,argocd>> (7.18.0)
 
-- [[provider_utils]] <<provider_utils,utils>> (2.7.0)
+- [[provider_null]] <<provider_null,null>> (3.3.2)
 
 === Resources
 
@@ -135,7 +135,7 @@ Description: Override of target revision of the application chart.
 
 Type: `string`
 
-Default: `"v3.0.2"`
+Default: `"v3.0.3"`
 
 ==== [[input_enable_service_monitor]] <<input_enable_service_monitor,enable_service_monitor>>
 
@@ -310,7 +310,7 @@ Description: ID to pass other modules in order to refer to this module as a depe
 |[[input_target_revision]] <<input_target_revision,target_revision>>
 |Override of target revision of the application chart.
 |`string`
-|`"v3.0.2"`
+|`"v3.0.3"`
 |no
 
 |[[input_enable_service_monitor]] <<input_enable_service_monitor,enable_service_monitor>>

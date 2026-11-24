@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.3](https://github.com/gersonrs/modern-gitops-stack-module-traefik/compare/v3.0.2...v3.0.3) (2026-11-24)
+
+
+### 📚 Documentation
+
+* add usage and dependencies to the module documentation ([#27](https://github.com/gersonrs/modern-gitops-stack-module-traefik/issues/27)) ([248d96d](https://github.com/gersonrs/modern-gitops-stack-module-traefik/commit/248d96dbf602f40c73ec0609079f10814b0073e9))
+
 ## [3.0.2](https://github.com/gersonrs/modern-gitops-stack-module-traefik/compare/v3.0.1...v3.0.2) (2026-11-21)
 
 
