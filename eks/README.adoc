@@ -1,3 +1,28 @@
+= modern-gitops-stack-module-traefik :: eks
+
+This variant of the <<traefik:ROOT:README.adoc[traefik module]>> Deploys Traefik on EKS using NodePort, since the AWS load balancer is terminated elsewhere. This variant is no longer used by the stack, which now relies on Istio.
+
+== Usage
+
+Declare the variant directly; it calls the module in the parent directory:
+
+[source,terraform]
+----
+module "traefik" {
+  source = "git::https://github.com/GersonRS/modern-gitops-stack-module-traefik.git//eks?ref=<RELEASE>"
+
+  cluster_name   = local.cluster_name
+  base_domain    = local.base_domain
+  subdomain      = local.subdomain
+  cluster_issuer = local.cluster_issuer
+  app_autosync   = local.app_autosync
+
+  dependency_ids = {
+    argocd = module.argocd_bootstrap.id
+  }
+}
+----
+
 // BEGIN_TF_DOCS
 === Requirements
 

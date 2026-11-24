@@ -1,3 +1,28 @@
+= modern-gitops-stack-module-traefik :: kind
+
+This variant of the <<traefik:ROOT:README.adoc[traefik module]>> Deploys Traefik on KinD, where MetalLB provides the LoadBalancer address. This variant is no longer used by the stack, which now relies on Istio.
+
+== Usage
+
+Declare the variant directly; it calls the module in the parent directory:
+
+[source,terraform]
+----
+module "traefik" {
+  source = "git::https://github.com/GersonRS/modern-gitops-stack-module-traefik.git//kind?ref=<RELEASE>"
+
+  cluster_name   = local.cluster_name
+  base_domain    = local.base_domain
+  subdomain      = local.subdomain
+  cluster_issuer = local.cluster_issuer
+  app_autosync   = local.app_autosync
+
+  dependency_ids = {
+    argocd = module.argocd_bootstrap.id
+  }
+}
+----
+
 // BEGIN_TF_DOCS
 === Requirements
 
