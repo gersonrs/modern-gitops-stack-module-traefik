@@ -1,6 +1,48 @@
 = modern-gitops-stack-module-traefik
-
+// Document attributes to replace along the document
 :traefik-chart-version: 39.0.9
+:original-repo-url: https://github.com/traefik/traefik-helm-chart
+
+A https://modern-gitops-stack.io[Modern GitOps Stack] module to deploy Traefik as the ingress controller. This module is no longer used by the stack, which now relies on Istio.
+
+The traefik chart used by this module is shipped in this repository as well, in order to avoid any unwanted behaviors caused by unsupported versions.
+
+[cols="1,1,1",options="autowidth,header"]
+|===
+|Current Chart Version |Original Repository |Default Values
+|*39.0.9* |https://github.com/traefik/traefik-helm-chart/tree/main/traefik[traefik] |https://artifacthub.io/packages/helm/traefik/traefik/39.0.9?modal=values[`values.yaml`]
+|===
+
+== Usage
+
+This module can be declared by adding the following block to your Terraform configuration:
+
+[source,terraform]
+----
+module "traefik" {
+  source = "git::https://github.com/GersonRS/modern-gitops-stack-module-traefik.git?ref=<RELEASE>"
+
+  cluster_name   = local.cluster_name
+  base_domain    = local.base_domain
+  subdomain      = local.subdomain
+  cluster_issuer = local.cluster_issuer
+  app_autosync   = local.app_autosync
+
+  dependency_ids = {
+    argocd = module.argocd.id
+  }
+}
+----
+
+The application is deployed to the `traefik` namespace.
+
+== Technical Reference
+
+=== Dependencies
+
+==== `module.argocd.id`
+
+Argo CD applies the application.
 
 // BEGIN_TF_DOCS
 === Requirements
